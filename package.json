@@ -12,7 +12,7 @@
   "keywords": [
     "journey",
     "builder",
-    "salesforce"
+    "salesforce marketing cloud"
   ],
   "author": "Devs United",
   "license": "ISC",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/devsutd/journey-builder-activity-template#readme",
   "dependencies": {
+    "bower": "^1.8.0",
     "express": "^4.15.4",
     "jwt-simple": "^0.5.1",
     "request": "^2.81.0",
