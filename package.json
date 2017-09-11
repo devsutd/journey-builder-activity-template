@@ -1,0 +1,29 @@
+{
+  "name": "jb-activity-template",
+  "version": "1.0.0",
+  "description": "Journey Builder Activity Template",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devsutd/journey-builder-activity-template.git"
+  },
+  "keywords": [
+    "journey",
+    "builder",
+    "salesforce"
+  ],
+  "author": "Devs United",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devsutd/journey-builder-activity-template/issues"
+  },
+  "homepage": "https://github.com/devsutd/journey-builder-activity-template#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "jwt-simple": "^0.5.1",
+    "request": "^2.81.0",
+    "require": "^2.4.20"
+  }
+}
