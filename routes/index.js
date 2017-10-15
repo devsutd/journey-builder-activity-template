@@ -14,7 +14,7 @@ exports.index = function(req, res){
         });
     } else {
         res.render( 'index', {
-            title: 'Journey Builder Activity Template',
+            title: 'Journey Builder Activity',
             results: activity.logExecuteData,
         });
     }
