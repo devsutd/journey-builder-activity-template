@@ -8,7 +8,6 @@
 * Node.js (if you'd like to test locally)
 * A Marketing Cloud Account with Journey Builder
 * A publicly accessible web server (this template was built using a free [Heroku](https://heroku.com) account with SSL support
-* An [App Center](https://appcenter-auth.s1.marketingcloudapps.com) account (you'll need to register if you don't have an account already)
 
 ### Getting Started
 
@@ -23,31 +22,20 @@ This guide covers Heroku, skip this step if you are familiar on how to deploy a 
 6. Click on "Deploy branch"
 7. Once your branch is deployed, click on the "View" button and verify you see the welcome message
 
-#### Configure App Center
+#### Configure your package in Marketing Cloud
 
-1. Login or create an account in [App Center](https://appcenter-auth.s1.marketingcloudapps.com)
-2. Select "Create New App" and then select "Package"
-3. Enter a Name and Package information
-4. Enter Login URL as [url of your activity]/login
-5. Enter Logout URL as [url of your activity]/logout
-6. Enter Redirect URL as [url of your activity]
-7. Click "Next" to go to the Integrate tab
-8. Select Producton or Sandbox based on the type of account your activity will live in and click on "Integrate"
-9. Login into your Marketing Cloud account and select the Business Unit you'd like to integrate this package with and click "Next" when done
-10. Select propper data access for your integration
-11. **Copy the App Signature value from the Summary page and save it for later**
-12. Go to the Journey Builder activity tab and click on the plus sign
-13. Provide a Name for your activity
-14. Provide a unique value for Key, it can be a random GUID. **Copy this value and save for later**
-15. Enter [url of your activity] as your Endpoint URL
-16. Enter [url of your activity]/help as your help URL
-17. Select "Messaging" for category
-18. Click on "Save Changes"
+1. Login to Marketing Cloud and Navigate to Administration > Account > Installed Packages
+2. Click on New and enter a name and a description for your package
+3. **Copy the JWT Secret value from the Summary page and save it for later**
+4. Click on Add Component, select Journey Builder Activity and Click next
+5. Enter the information about the activity, enter [url of your activity] as your Endpoint URL
+6. Click Save
+7. **Copy the Unique Key value from the Journey Builder Activity panel and save it for later**
 
 #### Configure Activity
 
 1. Open /public/config.json and:
-* Replace __application_key_from_appcenter_here__ for the value you got from step 14 from the previous section
+* Replace __application_key_from_appcenter_here__ for the value you got from step 7 from the previous section
 * Replace [your-domain-here] with the domain for your website
 2. Open /public/images and replace with the icons for the activity to your liking
 
@@ -56,7 +44,7 @@ This guide covers Heroku, skip this step if you are familiar on how to deploy a 
 1. Log back into Heroku and navigate to your app
 2. Click on "Settings"
 3. Click on "Reveal config vars"
-4. Add a new var called jwtSecret and paste the App Signature you got from step 11 when configuring App Center
+4. Add a new var called jwtSecret and paste the App Signature you got from step 3 when configuring your package in Marketing Cloud
 
 #### Testing your Activity
 
