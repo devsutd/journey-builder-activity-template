@@ -14,7 +14,7 @@
 #### Configure web server 
 This guide covers Heroku, skip this step if you are familiar on how to deploy a Node.js app
 
-1. Clone this repository
+1. Fork and Clone this repository
 2. Login into [Heroku](https://heroku.com)
 3. Click on New > Create new app
 4. Give a name to the app and click on "Create App"
