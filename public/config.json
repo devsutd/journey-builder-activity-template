@@ -15,11 +15,7 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
-                }									
-			],
+           "inArguments":[],
           "outArguments": [],
           "url": "https://<your-domain-here>/journeybuilder/execute",
            "verb": "POST",
@@ -31,7 +27,6 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "__application_key_from_appcenter_here__",
       "save": {
         "url": "https://<your-domain-here>/journeybuilder/save",
           "verb": "POST",

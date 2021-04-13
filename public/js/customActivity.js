@@ -10,9 +10,10 @@ define([
     var payload = {};
     $(window).ready(onRender);
 
-    connection.on('initActivity', initialize);
+    cconnection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
+    connection.on('requestedDataSources', requestDataSources);
 
     connection.on('clickedNext', save);
    
@@ -24,6 +25,11 @@ define([
         connection.trigger('requestEndpoints');
 
     }
+
+    function requestDataSources (dataSources) {    
+        console.log('*** DataSources ***');
+        console.log(dataSources);
+     }
 
     function initialize(data) {
         console.log(data);

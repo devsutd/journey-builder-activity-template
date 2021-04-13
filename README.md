@@ -35,8 +35,7 @@ This guide covers Heroku, skip this step if you are familiar on how to deploy a 
 #### Configure Activity
 
 1. Open /public/config.json and:
-* Replace __application_key_from_appcenter_here__ for the value you got from step 7 from the previous section
-* Replace [your-domain-here] with the domain for your website
+* Replace <your-domain-here> with the domain for your website
 2. Open /public/images and replace with the icons for the activity to your liking
 
 #### Add Heroku vars
