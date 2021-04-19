@@ -10,7 +10,7 @@ define([
     var payload = {};
     $(window).ready(onRender);
 
-    cconnection.on('initActivity', initialize);
+    connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
     connection.on('requestedDataSources', requestDataSources);
