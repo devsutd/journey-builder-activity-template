@@ -13,7 +13,9 @@ define([
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
-    connection.on('requestedDataSources', requestDataSources);
+    connection.on('requestedInteraction', onRequestedInteraction);
+    connection.on('requestedTriggerEventDefinition', onRequestedTriggerEventDefinition);
+    connection.on('requestedDataSources', onRequestedDataSources);
 
     connection.on('clickedNext', save);
    
@@ -23,13 +25,27 @@ define([
 
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
+        connection.trigger('requestInteraction');
+        connection.trigger('requestTriggerEventDefinition');
+        connection.trigger('requestDataSources');  
 
     }
 
-    function requestDataSources (dataSources) {    
-        console.log('*** DataSources ***');
+    function onRequestedDataSources(dataSources){
+        console.log('*** requestedDataSources ***');
         console.log(dataSources);
+        //datasources[0].keyPrefix: "Event.CloudPagesSma-27659de6-7790-fe49-28d5-919c43f38135.
+    }
+
+    function onRequestedInteraction (interaction) {    
+        console.log('*** requestedInteraction ***');
+        console.log(interaction);
      }
+
+     function onRequestedTriggerEventDefinition(eventDefinitionModel) {
+        console.log('*** requestedTriggerEventDefinition ***');
+        console.log(eventDefinitionModel);
+    }
 
     function initialize(data) {
         console.log(data);
