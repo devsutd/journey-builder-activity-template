@@ -34,7 +34,6 @@ define([
     function onRequestedDataSources(dataSources){
         console.log('*** requestedDataSources ***');
         console.log(dataSources);
-        //datasources[0].keyPrefix: "Event.CloudPagesSma-27659de6-7790-fe49-28d5-919c43f38135.
     }
 
     function onRequestedInteraction (interaction) {    
@@ -92,8 +91,7 @@ define([
         var postcardTextValue = $('#postcard-text').val();
 
         payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens,
-            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
+            "tokens": authTokens
         }];
         
         payload['metaData'].isConfigured = true;
